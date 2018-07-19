@@ -1,0 +1,11 @@
+@import '../styles.scss';
+
+.header{
+    font-size: $header-font;
+    display : grid;
+    text-align: center;
+
+    .header-text{
+        font-family: 'Lovers Quarrel', cursive;
+    }
+}
