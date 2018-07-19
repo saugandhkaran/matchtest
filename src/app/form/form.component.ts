@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from '../../../node_modules/rxjs';
-import { FormControl } from '../../../node_modules/@angular/forms';
-import {map, startWith} from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -10,10 +8,14 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class FormComponent implements OnInit {
  
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
     
+  }
+
+  login() {
+    this.router.navigateByUrl('/search');
   }
 
 }
