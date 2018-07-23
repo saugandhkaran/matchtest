@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-<div class="items">
+<div *ngFor="let item of avatars">
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title>{{item.name.first}}</mat-card-title>
+    <mat-card-subtitle>{{item.location.city}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <img mat-card-image src="{{item.picture.medium}}" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-    </p>
+      Likes</p>
+      <!-- <mat-chip-list>
+        <mat-chip *ngFor="let like of item.likes">{{like.activity}}</mat-chip>
+      </mat-chip-list> -->
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="accent">LIKE</button>
     <button mat-raised-button color="primary" style="float:right;">NEXT</button>
   </mat-card-actions>
 </mat-card>
-=======
-<div class="cardcontainer list">
-  <ul class="cardlist" *ngFor="let avatar of avatars">
-    <li class="card current">{{avatar.name}}</li>
-    
-  </ul>
-  <button class="but-nope">X</button>
-  <button class="but-yay">✔</button>
->>>>>>> 7a1776bfd298b534a1e28fef1c4d86bf6522207b
 </div>
