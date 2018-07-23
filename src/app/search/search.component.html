@@ -1,3 +1,8 @@
-<p>
-  search works!
-</p>
+<div class="cardcontainer list">
+  <ul class="cardlist" *ngFor="let avatar of avatars">
+    <li class="card current">{{avatar.name}}</li>
+    
+  </ul>
+  <button class="but-nope">X</button>
+  <button class="but-yay">✔</button>
+</div>
