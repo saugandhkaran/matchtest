@@ -11,10 +11,18 @@ import{ GetAvatarService} from '../service/get-list-of-names.service';
 export class SearchComponent implements OnInit {
   constructor(private getAvatarService : GetAvatarService) { }
   avatars;
+
   ngOnInit() {
     this.avatars = this.getAvatarService.getAvatars().subscribe(data => {
       this.avatars = data.results;
       console.log(this.avatars);
     });
   }
-};
+
+  getNextPerson () {
+    this.avatars = this.getAvatarService.getAvatars().subscribe(data => {
+    this.avatars = data.results;
+  })
+}
+}
+

@@ -1,11 +1,10 @@
 <div *ngFor="let item of avatars">
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{item.name.first}}</mat-card-title>
-    <mat-card-subtitle>{{item.location.city}}</mat-card-subtitle>
+    <img mat-card-avatar src="{{item.picture.thumbnail}}"/>
+    <mat-card-title><span class="bold">{{item.name.first}}</span> from <span class="bold">{{item.location.city}}</span></mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="{{item.picture.medium}}" alt="Photo of a Shiba Inu">
+  <img mat-card-image src="{{item.picture.large}}" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
       Likes</p>
@@ -15,7 +14,7 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="accent">LIKE</button>
-    <button mat-raised-button color="primary" style="float:right;">NEXT</button>
+    <button mat-raised-button color="primary" style="float:right;" (click)="getNextPerson()">NEXT</button>
   </mat-card-actions>
 </mat-card>
 </div>
